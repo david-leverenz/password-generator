@@ -1,68 +1,74 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
-// var pwspecs = {
-//   length: pull from popup;
-//   lower: pull from popup;
-//   upper: pull from popup;
-//   numbers: pull from popup;
-//   special: pull from popup;
-// }
 
-var lowercharacters = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
-var uppercharacters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
-var specialcharaters = ["~","!","@","#","$","%","^","&","*","(",")","_","+","="]
+var lowerCharacters = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
+var upperCharacters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
+var specialCharaters = ["~","!","@","#","$","%","^","&","*","(",")","_","+","="]
+var numberCharacters = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
 
 var text;
-var pwlength
-var chooselower
-var chooseupper
-var choosenumbers
-var choosespecial
+var pwLength;
+var chooseLower;
+var chooseUpper;
+var chooseNumbers;
+var chooseSpecial;
+
 
 function generateIt() {
   let number;
-  let pwlength = prompt("Specify password length (between 8 and 128)", 8);
-  if (pwlength == null || pwlength == "" || pwlength == "Enter Here") {
-    text = "User cancelled the prompt.";
+  let pwLength = prompt("Specify password length (between 8 and 128)", 8);
+  if (pwLength == null || pwLength < 8 || pwLength > 128 || pwLength == "Enter Here" || isNaN(pwLength)) {
+    alert("Please enter a number is between 8 and 128.");
+    generateIt();
   } else {
-    text = "You chose a length of " + pwlength + ".";
+    text = "You chose a length of " + pwLength + ".";
   }
   console.log(text);
-
-  for (var i = 0; i < pwlength; i++) { 
-    console.log(lower[i] + ".");
-  }
 
   if (confirm("Do you want lower case characters?")) {
-    chooselower=true;
+    chooseLower=true;
   } else {
-    chooselower=false;;
+    chooseLower=false;;
   }
-  console.log(chooselower);
+  console.log(chooseLower);
 
   if (confirm("Do you want upper case characters?")) {
-    chooseupper=true;
+    chooseUpper=true;
   } else {
-    chooseupper=false;;
+    chooseUpper=false;;
   }
-  console.log(chooseupper);
+  console.log(chooseUpper);
 
-  var text;
-  if (confirm("Do you want numbers?")) {
-    text = "You pressed Yes to numbers.";
+   if (confirm("Do you want numbers?")) {
+    choosenumbers=true;
   } else {
-    text = "You do not want numbers.";
+    choosenumbers=false;
   }
-  console.log(text);
+  console.log(chooseUpper);
  
-  var text;
   if (confirm("Do you want special characters?")) {
-    text = "You pressed Yes to special characters.";
+    chooseSpecial=true;
   } else {
-    text = "You do not want special characters.";
+    chooseSpecial=false;
   }
-  console.log(text);
+  console.log(chooseSpecial);
+
+  // for (var i = 0; i < pwLength; i++) { 
+  //   console.log(lowercharacters[i] + ".");
+  // }
+  var lowerSelect;
+
+  var randNum = Math.floor(Math.random() *26);
+  var lowerSelect = lowerCharacters[randNum];
+  console.log("Lowercase selection: " + lowerSelect);
+
+  var upperSelect;
+
+  var randNum = Math.floor(Math.random() *26);
+  var upperSelect = upperCharacters[randNum];
+  console.log("Uppercase selection: " + upperSelect);
+
 }
 
 
