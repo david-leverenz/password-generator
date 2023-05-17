@@ -18,6 +18,10 @@ var chooseSpecial;
 function generateIt() {
 
   var pwLength = prompt("Specify password length (between 8 and 128)", 8);
+    if (pwLength===null) {
+      alert("No password for you!");
+      return;
+    }
   if (pwLength == null || pwLength < 8 || pwLength > 128 || pwLength == "Enter Here" || isNaN(pwLength)) {
     alert("Please enter a number is between 8 and 128.");
     generateIt();
