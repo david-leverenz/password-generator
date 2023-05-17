@@ -4,7 +4,7 @@ var generateBtn = document.querySelector("#generate");
 
 var lowerCharacters = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
 var upperCharacters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
-var specialCharaters = ["~","!","@","#","$","%","^","&","*","(",")","_","+","="]
+var specialCharacters = ["~","!","@","#","$","%","^","&","*","(",")","_","+","="]
 var numberCharacters = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
 
 var text;
@@ -16,8 +16,8 @@ var chooseSpecial;
 
 
 function generateIt() {
-  let number;
-  let pwLength = prompt("Specify password length (between 8 and 128)", 8);
+
+  var pwLength = prompt("Specify password length (between 8 and 128)", 8);
   if (pwLength == null || pwLength < 8 || pwLength > 128 || pwLength == "Enter Here" || isNaN(pwLength)) {
     alert("Please enter a number is between 8 and 128.");
     generateIt();
@@ -68,6 +68,20 @@ function generateIt() {
   var randNum = Math.floor(Math.random() *26);
   var upperSelect = upperCharacters[randNum];
   console.log("Uppercase selection: " + upperSelect);
+
+  var numberSelect;
+
+  var randNum = Math.floor(Math.random() *10);
+  var numberSelect = numberCharacters[randNum];
+  console.log("Number selection: " + numberSelect);
+
+  var specialSelect;
+
+  var randNum = Math.floor(Math.random() *10);
+  var specialSelect = specialCharacters[randNum];
+  console.log("Number selection: " + specialSelect);
+
+  console.log(lowerSelect+upperSelect+numberSelect+specialSelect);
 
 }
 
