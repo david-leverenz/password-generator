@@ -13,6 +13,7 @@ var chooseLower;
 var chooseUpper;
 var chooseNumbers;
 var chooseSpecial;
+var generatedPassword;
 
 function generateIt() {
 
@@ -100,6 +101,10 @@ function generateIt() {
       console.log("\n" + "Special selection: " + specialSelect);
 
       console.log("\n" + "Your password is: "+ lowerSelect + upperSelect + numberSelect + specialSelect);
+    
+      generatedPassword = (lowerSelect + upperSelect + numberSelect + specialSelect);
+      var passwordText = document.querySelector("#password");
+      passwordText.value = generatedPassword;
     }
   
  
