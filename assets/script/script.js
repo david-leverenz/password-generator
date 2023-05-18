@@ -25,9 +25,9 @@ function generateIt() {
     prompt("Please enter a number is between 8 and 128.");
     generateIt();
   } else {
-    text = "You chose a length of " + pwLength + ".";
+  console.log("You chose a length of " + pwLength + ".");
   }
-  console.log(text);
+  // console.log(text);
 
   if (confirm("Do you want lower case characters?")) {
     chooseLower = true;
@@ -63,12 +63,17 @@ function generateIt() {
 
   // for (var i = 0; i < pwLength; i++) {
 
-    // if (chooseLower = true) {
+    if (chooseLower = true) {
+      console.log("chooseLower value is: " + chooseLower);
       var lowerSelect;
 
       var randNum = Math.floor(Math.random() * 26);
       var lowerSelect = lowerCharacters[randNum];
       console.log("Lowercase selection: " + lowerSelect);
+    } else {
+      console.log("Lowercase selection: " + lowerSelect );
+    }
+
 
     // } else if (chooseUpper = true) {
 
