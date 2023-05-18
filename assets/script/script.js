@@ -14,6 +14,7 @@ var chooseUpper;
 var chooseNumbers;
 var chooseSpecial;
 var generatedPassword;
+var characterSetContents= [];
 
 // first get password info
 // then create random characters
@@ -30,7 +31,7 @@ function generateIt() {
     prompt("Please enter a number is between 8 and 128.");
     generateIt();
   } else {
-  console.log("You chose a length of " + pwLength + ".");
+    console.log("You chose a length of " + pwLength + ".");
   }
   // console.log(text);
 
@@ -45,10 +46,10 @@ function generateIt() {
     chooseUpper = true;
   } else {
     chooseUpper = false;
-    
+
     // console.log("datainput: "+ datainput);
 
-// var chooseUpper =  datainput;  
+    // var chooseUpper =  datainput;  
   }
   console.log("\n" + "Upper choice: " + chooseUpper);
 
@@ -66,56 +67,64 @@ function generateIt() {
   }
   console.log("\n" + "Special choice: " + chooseSpecial);
 
-  // for (var i = 0; i < pwLength; i++) {
-
-    if (chooseLower = true) {
-      console.log("\n" + "chooseLower value is: " + chooseLower);
-
-      var lowerSelect;
-
-      var randNum = Math.floor(Math.random() * 26);
-      var lowerSelect = lowerCharacters[randNum];
-      console.log("\n" + "Lowercase selection: " + lowerSelect);
-    } else {
-      console.log("\n" + "Lowercase selection: " + lowerSelect );
-    }
 
 
-    // } else if (chooseUpper = true) {
+  if (chooseLower == true) {
+    console.log("\n" + "chooseLower value is: " + chooseLower);
+    characterSetContents = characterSetContents.concat(lowerCharacters);
+    // var lowerSelect;
 
-      var upperSelect;
-
-      var randNum = Math.floor(Math.random() * 26);
-      var upperSelect = upperCharacters[randNum];
-      console.log("\n" + "Uppercase selection: " + upperSelect);
-
-    // } else if (chooseNumbers = true) {
-
-      var numberSelect;
-
-      var randNum = Math.floor(Math.random() * 10);
-      var numberSelect = numberCharacters[randNum];
-      console.log("\n" + "Number selection: " + numberSelect);
-   
-    // } else if (chooseSpecial = true) {
+    // var randNum = Math.floor(Math.random() * 26);
+    // var lowerSelect = lowerCharacters[randNum];
+    // console.log("\n" + "Lowercase selection: " + lowerSelect);
+  }
   
-      var specialSelect;
+  if (chooseUpper == true) {
+    characterSetContents = characterSetContents.concat(upperCharacters);
+    // var upperSelect;
 
-      var randNum = Math.floor(Math.random() * 10);
-      var specialSelect = specialCharacters[randNum];
-      console.log("\n" + "Special selection: " + specialSelect);
+    // var randNum = Math.floor(Math.random() * 26);
+    // var upperSelect = upperCharacters[randNum];
+    // console.log("\n" + "Uppercase selection: " + upperSelect);
+  }
+  
+  if (chooseNumbers == true) {
+    characterSetContents = characterSetContents.concat(numberCharacters);
+    // var numberSelect;
 
-      console.log("\n" + "Your password is: "+ lowerSelect + upperSelect + numberSelect + specialSelect);
-    // }
-      generatedPassword = (lowerSelect + upperSelect + numberSelect + specialSelect);
-      var passwordText = document.querySelector("#password");
-      passwordText.value = generatedPassword;
-    }
+
+
+  } 
+  
+  if (chooseSpecial == true) {
+    characterSetContents = characterSetContents.concat(specialCharacters);
+    // var specialSelect;
+
+    // var randNum = Math.floor(Math.random() * 10);
+    // var specialSelect = specialCharacters[randNum];
+    // console.log("\n" + "Special selection: " + specialSelect);
+    
+  }
+    console.log(characterSetContents);
+
+    // console.log("\n" + "Your password is: " + lowerSelect + upperSelect + numberSelect + specialSelect);
+  
+  for (var i = 0; i < pwLength; i++) {
+    var randNum = Math.floor(Math.random() * characterSetContents.length);
+    var passwordCharacters = characterSetContents[randNum];
+    console.log("Character selection: " + passwordCharacters);
+  }
+  generatedPassword = "password"
+  var passwordText = document.querySelector("#password");
+  passwordText.value = generatedPassword;
+
   
  
 
-// }
+}
 
+// var newPassword
+// newPassword += pickletter
 
 
 // // Write password to the #password input
