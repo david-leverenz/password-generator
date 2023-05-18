@@ -15,6 +15,10 @@ var chooseNumbers;
 var chooseSpecial;
 var generatedPassword;
 
+// first get password info
+// then create random characters
+// then generate password
+
 function generateIt() {
 
   var pwLength = prompt("Specify password length (between 8 and 128)", 8);
@@ -66,6 +70,7 @@ function generateIt() {
 
     if (chooseLower = true) {
       console.log("\n" + "chooseLower value is: " + chooseLower);
+
       var lowerSelect;
 
       var randNum = Math.floor(Math.random() * 26);
@@ -101,7 +106,7 @@ function generateIt() {
       console.log("\n" + "Special selection: " + specialSelect);
 
       console.log("\n" + "Your password is: "+ lowerSelect + upperSelect + numberSelect + specialSelect);
-    
+    // }
       generatedPassword = (lowerSelect + upperSelect + numberSelect + specialSelect);
       var passwordText = document.querySelector("#password");
       passwordText.value = generatedPassword;
