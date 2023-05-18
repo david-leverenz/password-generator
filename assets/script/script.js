@@ -21,7 +21,7 @@ var generatedPassword;
 
 function generateIt() {
 
-  var pwLength = prompt("Specify password length (between 8 and 128)", 8);
+  var pwLength = parseInt(window.prompt("Specify password length (between 8 and 128)", 8));
   if (pwLength === null) {
     alert("No password for you!");
     return;
