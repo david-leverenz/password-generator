@@ -34,7 +34,7 @@ function generateIt() {
   } else {
     chooseLower = false;
   }
-  console.log("Lower choice: " + chooseLower);
+  console.log("\n" + "Lower choice: " + chooseLower);
 
   if (confirm("Do you want upper case characters?")) {
     chooseUpper = true;
@@ -45,33 +45,33 @@ function generateIt() {
 
 // var chooseUpper =  datainput;  
   }
-  console.log("Upper choice: " + chooseUpper);
+  console.log("\n" + "Upper choice: " + chooseUpper);
 
   if (confirm("Do you want numbers?")) {
     chooseNumbers = true;
   } else {
     chooseNumbers = false;
   }
-  console.log("Number choice: " + chooseNumbers);
+  console.log("\n" + "Number choice: " + chooseNumbers);
 
   if (confirm("Do you want special characters?")) {
     chooseSpecial = true;
   } else {
     chooseSpecial = false;
   }
-  console.log("Special choice: " + chooseSpecial);
+  console.log("\n" + "Special choice: " + chooseSpecial);
 
   // for (var i = 0; i < pwLength; i++) {
 
     if (chooseLower = true) {
-      console.log("chooseLower value is: " + chooseLower);
+      console.log("\n" + "chooseLower value is: " + chooseLower);
       var lowerSelect;
 
       var randNum = Math.floor(Math.random() * 26);
       var lowerSelect = lowerCharacters[randNum];
-      console.log("Lowercase selection: " + lowerSelect);
+      console.log("\n" + "Lowercase selection: " + lowerSelect);
     } else {
-      console.log("Lowercase selection: " + lowerSelect );
+      console.log("\n" + "Lowercase selection: " + lowerSelect );
     }
 
 
@@ -81,7 +81,7 @@ function generateIt() {
 
       var randNum = Math.floor(Math.random() * 26);
       var upperSelect = upperCharacters[randNum];
-      console.log("Uppercase selection: " + upperSelect);
+      console.log("\n" + "Uppercase selection: " + upperSelect);
 
     // } else if (chooseNumbers = true) {
 
@@ -89,7 +89,7 @@ function generateIt() {
 
       var randNum = Math.floor(Math.random() * 10);
       var numberSelect = numberCharacters[randNum];
-      console.log("Number selection: " + numberSelect);
+      console.log("\n" + "Number selection: " + numberSelect);
    
     // } else if (chooseSpecial = true) {
   
@@ -97,9 +97,9 @@ function generateIt() {
 
       var randNum = Math.floor(Math.random() * 10);
       var specialSelect = specialCharacters[randNum];
-      console.log("Special selection: " + specialSelect);
+      console.log("\n" + "Special selection: " + specialSelect);
 
-      console.log(lowerSelect + upperSelect + numberSelect + specialSelect);
+      console.log("\n" + "Your password is: "+ lowerSelect + upperSelect + numberSelect + specialSelect);
     }
   
  
