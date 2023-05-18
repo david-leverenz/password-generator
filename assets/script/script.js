@@ -108,13 +108,17 @@ function generateIt() {
     console.log(characterSetContents);
 
     // console.log("\n" + "Your password is: " + lowerSelect + upperSelect + numberSelect + specialSelect);
-  
+  var generatedPassword="";
+
   for (var i = 0; i < pwLength; i++) {
     var randNum = Math.floor(Math.random() * characterSetContents.length);
     var passwordCharacters = characterSetContents[randNum];
     console.log("Character selection: " + passwordCharacters);
+    generatedPassword=generatedPassword+passwordCharacters;
+
   }
-  generatedPassword = "password"
+  console.log("Paswword: " + generatedPassword);
+
   var passwordText = document.querySelector("#password");
   passwordText.value = generatedPassword;
 
