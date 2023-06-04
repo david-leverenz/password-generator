@@ -11,6 +11,13 @@ If you do not select any character sets you get a message to try again.<br>
 When all prompts are answered then a password is generated that matches your selected criteria.<br>
 When the password is generated it is written to a box on the screen.<br>
 
+## Links
+Github link: https://github.com/david-leverenz/password-generatorLinks to an external site.
+Live link: https://david-leverenz.github.io/password-generator/Links to an external site.
+
+## Screenshot
+
+
 ## Getting Started
 ### Dependencies
 N/A
