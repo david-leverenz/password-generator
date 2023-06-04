@@ -12,10 +12,11 @@ When all prompts are answered then a password is generated that matches your sel
 When the password is generated it is written to a box on the screen.<br>
 
 ## Links
-Github link: https://github.com/david-leverenz/password-generatorLinks to an external site.
+Github link: https://github.com/david-leverenz/password-generatorLinks to an external site.<br>
 Live link: https://david-leverenz.github.io/password-generator/Links to an external site.
 
 ## Screenshot
+![image](https://github.com/david-leverenz/password-generator/assets/131185593/3c688199-562c-42ff-81a3-41bfbea33ebe)
 
 
 ## Getting Started
